@@ -25,6 +25,7 @@ from .block import (
     DFL,
     SPP,
     SPPF,
+    SimSPPF,
     Bottleneck,
     BottleneckCSP,
     C2f,
@@ -52,10 +53,18 @@ from .block import (
     RepVGGDW
 )
 from .conv import (
+    SimFusion_4in,
+    SimFusion_3in,
+    IFM,
+    InjectionMultiSum_Auto_pool,
+    PyramidPoolAgg,
+    AdvPoolFusion,
+    TopBasicLayer,    
     CBAM,
     ChannelAttention,
     Concat,
     Conv,
+    SimConv,
     Conv2,
     ConvTranspose,
     DWConv,
@@ -83,6 +92,7 @@ from .transformer import (
 __all__ = (
     "Conv",
     "Conv2",
+    "SimConv",
     "LightConv",
     "RepConv",
     "DWConv",
@@ -103,6 +113,7 @@ __all__ = (
     "HGStem",
     "SPP",
     "SPPF",
+    "SimSPPF",
     "C1",
     "C2",
     "C3",
