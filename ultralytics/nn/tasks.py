@@ -8,6 +8,12 @@ import torch
 import torch.nn as nn
 
 from ultralytics.nn.modules import (
+    SimFusion_4in,
+    SimFusion_3in,
+    IFM,InjectionMultiSum_Auto_pool,
+    PyramidPoolAgg,
+    AdvPoolFusion,
+    TopBasicLayer,
     AIFI,
     C1,
     C2,
@@ -16,6 +22,8 @@ from ultralytics.nn.modules import (
     OBB,
     SPP,
     SPPF,
+    SimSPPF,
+    SimConv,
     Bottleneck,
     BottleneckCSP,
     C2f,
@@ -869,6 +877,8 @@ def parse_model(d, ch, verbose=True):  # model_dict, input_channels(3)
             GhostBottleneck,
             SPP,
             SPPF,
+            SimSPPF,
+            SimConv,
             DWConv,
             Focus,
             BottleneckCSP,
